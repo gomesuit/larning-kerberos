@@ -2,7 +2,7 @@
 
 
 # setup server
-yum install krb5-server
+yum install -y krb5-server
 
 # vim /etc/krb5.conf
 kdb5_util create -s
