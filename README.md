@@ -2,6 +2,7 @@
 
 # setup server
 ```
+kdb5_util create -s
 kadmin.local
 addprinc root/admin
 addprinc user01

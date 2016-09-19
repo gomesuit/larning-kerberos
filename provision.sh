@@ -4,9 +4,6 @@
 # setup server
 yum install -y krb5-server
 
-# vim /etc/krb5.conf
-kdb5_util create -s
-
 
 tee /var/kerberos/krb5kdc/kdc.conf <<-EOF 
 [kdcdefaults]
@@ -51,23 +48,6 @@ tee /etc/krb5.conf <<-EOF
 EOF
 
 echo "192.168.33.60 kerberos.example.com" >> /etc/hosts
-
-kdb5_util create -s
-# kadmin.local
-# addprinc root/admin
-# addprinc user01
-# listprincs
-# exit
-
-#systemctl start krb5kdc.service
-
-# client
-#yum install -y krb5-workstation
-
-#kinit user01@EXAMPLE.COM
-#klist
-
-
 
 
 
